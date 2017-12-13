@@ -32,13 +32,13 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-      <form onSubmit = {this.handleSubmit}>
-        <input
+      <form className="form" onSubmit = {this.handleSubmit}>
+        <input className="author-input"
           type='text'
           placeholder="User Name"
           value={this.state.author}
           onChange={this.handleAuthorChange} />
-        <textarea
+        <textarea className="comment-box"
           type='text'
           placeholder='kittens...'
           value={this.state.text}
@@ -46,7 +46,8 @@ export default class Form extends Component {
 
         <button
           type='submit'
-          value='Post'>
+          value='Post'
+          className= "submit-button">
           Submit</button>
       </form>
       </div>
