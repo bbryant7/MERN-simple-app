@@ -19,18 +19,19 @@ class App extends Component {
   }
   componentDidMount() {
     this.getComments();
+    setInterval(this.loadCommentsFromServer, 2000);
   }
 
   handleSubmit(comment){
-    axios.post('http://localhost:3001/api/comments', comment)
-      .then(res => {
-        this.getComments()
-      })
-      .catch(error => {
-        console.log(error)
-      })
+ let newComments = this.state.data.concat([comment]);
+ this.setState({ data: newComments });
+ axios.post('http://localhost:3001/api/comments', comment)
+   .catch(err => {
+     console.error(err);
+     this.setState({ data: comment });
+   });
+}
 
-  }
   render() {
     return (
       <div  className='App'>
