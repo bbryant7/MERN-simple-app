@@ -22,7 +22,10 @@ export default class Form extends Component {
   }
 
   handleSubmit(e){
+    e.preventDefault();
     console.log("yayyy kittens!")
+    this.props.onCommentSubmit({ author: this.state.author, text:this.state.text});
+    this.setState({author: '', text: ''})
   }
   render() {
     return (
