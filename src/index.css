@@ -1,22 +1,40 @@
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  line-height: 1.4;
   font-family: 'Raleway', sans-serif;
   background-color: #ECF0F1;
   color: #232323;
 }
 
 .splash{
-  background-image: url('https://unsplash.com/photos/YifPTBCy-x8');
+  height: 500px;
+  width: 100%;
+  background-image: url('kitsanoo-65241.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+
+
+
 }
 
 h1{
   font-family: 'Lobster', cursive;
-  font-size: 50px;
+  font-size: 55px;
+  margin-top: 0;
+  padding: 150px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-shadow: white 1px 1px 8px, white 1px 1px 8px;
 }
 
 h2{
+  font-size: 30px;
   font-weight: 500;
+  padding: 200px;
+  padding-top: 2px;
+  text-shadow: white 1px 1px 8px, white 1px 1px 8px;
 }
 
 .post{

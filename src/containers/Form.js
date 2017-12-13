@@ -35,12 +35,12 @@ export default class Form extends Component {
       <form className="form" onSubmit = {this.handleSubmit}>
         <input className="author-input"
           type='text'
-          placeholder="User Name"
+          placeholder="Name"
           value={this.state.author}
           onChange={this.handleAuthorChange} />
         <textarea className="comment-box"
           type='text'
-          placeholder='kittens...'
+          placeholder='Share your kitten related tips, tricks and stories...'
           value={this.state.text}
           onChange={this.handleTextBoxChange} />
 

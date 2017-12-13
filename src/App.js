@@ -34,9 +34,10 @@ class App extends Component {
   render() {
     return (
       <div  className='App'>
-      <div className="splash"> </div>
+      <div className="splash">
       <h1> Lets Talk Kittens </h1>
-      <h2> Tips tricks and giggles for all things Kitten</h2>
+      <h2> Tips, Tricks and Stories for all things Kitten</h2>
+      </div>
       <Form onSubmit={this.handleSubmit}/>
       <List data={ this.state.data }/>
 
