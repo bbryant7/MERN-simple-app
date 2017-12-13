@@ -4,8 +4,8 @@ let mongoose = require('mongoose');
 let bodyParser = require('body-parser');
 let commentSchema = require('./model/commentSchema')
 let app = express();
-
 let router = express.Router();
+
 mongoose.connect('mongodb://localhost:27017/kittenforumdb', { useMongoClient: true })
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -52,14 +52,9 @@ router.route('/comments')
 })
 
 
-
-
-//Use our router configuration when we call /api
 app.use('/api', router);
 
 
-
-//starts the server and listens for requests
 app.listen(3001, function() {
  console.log(`api running on port 3001`);
 });

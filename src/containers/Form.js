@@ -26,6 +26,7 @@ export default class Form extends Component {
     console.log("yayyy kittens!")
     console.log("author", this.state.author)
     console.log("text", this.state.text);
+    this.props.onSubmit({ author:this.state.author, text:this.state.text})
     this.setState({author: '', text: ''})
   }
   render() {
@@ -43,7 +44,10 @@ export default class Form extends Component {
           value={this.state.text}
           onChange={this.handleTextBoxChange} />
 
-        <button type="submit">Submit</button>
+        <button
+          type='submit'
+          value='Post'>
+          Submit</button>
       </form>
       </div>
     );
