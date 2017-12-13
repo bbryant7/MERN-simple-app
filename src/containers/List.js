@@ -6,10 +6,7 @@ export default class List extends Component {
   render() {
     let forumList = this.props.data.map(comment => {
       return(
-        <Comment author={comment.author} text={comment.text} key={comment.id}>
-          {comment.author}
-          {comment.text}
-        </Comment>
+        <Comment author={comment.author} text={comment.text} key={comment.id}/>
       )
     })
     return (
