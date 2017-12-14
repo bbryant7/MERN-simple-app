@@ -1,58 +1,62 @@
-import React, { Component } from 'react';
-import '../App.css';
-
+import React, { Component } from "react";
+import "../App.css";
 
 export default class Form extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {author: '', text:''};
+    this.state = { author: "", text: "" };
     this.handleAuthorChange = this.handleAuthorChange.bind(this);
     this.handleTextBoxChange = this.handleTextBoxChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleAuthorChange(e){
-    this.setState({author: e.target.value})
-    console.log(e.target.value)
+  handleAuthorChange(e) {
+    this.setState({ author: e.target.value });
+    console.log(e.target.value);
   }
 
-  handleTextBoxChange(e){
-      this.setState({text:e.target.value})
-      console.log(e.target.value)
-      console.log(e.target.value)
-    }
+  handleTextBoxChange(e) {
+    this.setState({ text: e.target.value });
+    console.log(e.target.value);
+    console.log(e.target.value.length);
+  }
 
-  handleSubmit(e){
+  handleSubmit(e) {
     e.preventDefault();
-    console.log("yayyy kittens!")
-    console.log("author", this.state.author)
+    console.log("yayyy kittens!");
+    console.log("author", this.state.author);
     console.log("text", this.state.text);
-    this.props.onSubmit({ author:this.state.author, text:this.state.text})
-    this.setState({author: '', text: ''})
-  }
+    console.log("text length", this.state.text.length);
+    this.props.onSubmit({ author: this.state.author, text: this.state.text });
+    this.setState({ author: "", text: "" });
+  
+}
   render() {
     return (
       <div>
-      <form className="form" onSubmit = {this.handleSubmit}>
-        <input className="author-input"
-          type='text'
-          placeholder="Name"
-          value={this.state.author}
-          onChange={this.handleAuthorChange} />
-        <textarea className="comment-box"
-          type='text'
-          maxLength='500'
-          minLength='5'
-          placeholder='Share your kitten related tips, tricks and stories...'
-          value={this.state.text}
-          onChange={this.handleTextBoxChange} />
+        <form className="form" onSubmit={this.handleSubmit}>
+          <input
+            className="author-input"
+            type="text"
+            placeholder="Name"
+            value={this.state.author}
+            onChange={this.handleAuthorChange}
+          />
+          <textarea
+            className="comment-box"
+            type="text"
+            maxLength="500"
+            minLength="5"
+            spellCheck="true"
+            placeholder="Share your kitten related tips, tricks and stories..."
+            value={this.state.text}
+            onChange={this.handleTextBoxChange}
+          />
 
-        <button
-          type='submit'
-          value='Post'
-          className= "submit-button">
-          Submit</button>
-      </form>
+          <button type="submit" value="Post" className="submit-button">
+            Submit
+          </button>
+        </form>
       </div>
     );
   }

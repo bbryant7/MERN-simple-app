@@ -2,22 +2,22 @@ body {
   margin: 0 auto;
   padding: 0;
   line-height: 1.4;
-  font-family: 'Raleway', sans-serif;
-  background-color: #ECF0F1;
+  font-family: "Raleway", sans-serif;
+  background-color: #ecf0f1;
   color: #232323;
 }
 
-.splash{
+.splash {
   height: 300px;
   width: 100%;
-  background-image: url('kitsanoo-65241.jpg');
+  background-image: url("kitsanoo-65241.jpg");
   background-size: cover;
   background-position: center;
   text-align: left;
 }
 
-h1{
-  font-family: 'Lobster', cursive;
+h1 {
+  font-family: "Lobster", cursive;
   text-align: center;
   vertical-align: center;
   margin-top: 0;
@@ -26,7 +26,7 @@ h1{
   text-shadow: white 1px 1px 8px, white 1px 1px 8px;
 }
 
-h2{
+h2 {
   text-align: center;
   vertical-align: center;
   margin-top: 0;
@@ -36,28 +36,26 @@ h2{
   text-shadow: white 1px 1px 8px, white 1px 1px 8px;
 }
 
-.post{
+.post {
   display: flex;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 2%;
 }
 
-.authorimage{
+.authorimage {
   height: 70px;
   width: 70px;
   border-radius: 100%;
-  background-color:#BEC3C7;
-
+  background-color: #bec3c7;
 }
 .commentBox {
-  border: 1px solid #BEC3C7;
+  border: 1px solid #bec3c7;
   background-color: white;
   margin-left: 4%;
   flex-basis: 100%;
   padding: 5px;
   text-align: left;
-
 }
 
 .commentBox p {
@@ -65,19 +63,14 @@ h2{
 }
 
 .authorbox {
-  color: #FF8029;
+  color: #ff8029;
   text-align: center;
 }
 
 button {
   padding: 8px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  background-color: #00BC9C;
-  border: 1px solid #00BC9C;
-  /*width: 80px;*/
+  background-color: #00bc9c;
+  border: 1px solid #00bc9c;
 }
 
 form {
@@ -87,17 +80,16 @@ form {
   margin-right: 10%;
   margin-bottom: 6%;
   margin-top: 6%;
-
 }
 
 .author-input {
-  border: 1px solid #BEC3C7;
+  border: 1px solid #bec3c7;
   padding: 5px;
 }
 
 .comment-box {
   margin-top: 1%;
-  border: 1px solid #BEC3C7;
+  border: 1px solid #bec3c7;
   padding: 5px;
   height: 150px;
 }
@@ -105,46 +97,43 @@ form {
 .submit-button {
   border-radius: 5px;
   margin-top: 1%;
-  background-color: #00BC9C;
-  border: 1px solid #00BC9C;
+  background-color: #00bc9c;
+  border: 1px solid #00bc9c;
 }
 
-@media screen and ( min-width:900px ){
-  h1{
+@media screen and (min-width: 900px) {
+  h1 {
     font-size: 55px;
     padding-top: 200px;
-
   }
 
-  h2{
+  h2 {
     font-size: 30px;
+  }
 
-}
+  .splash {
+    height: 500px;
+  }
 
-.splash{
-  height: 500px;
-}
+  .post {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
 
-.post{
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-form {
-  margin-left: 20%;
-  margin-right: 20%;
-
-}
-.author-input{
-  font-size: 20px;
-}
-.submit-button{
+  form {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .author-input {
     font-size: 20px;
-}
-
-.comment-box{
+  }
+  .submit-button {
     font-size: 20px;
-}
+  }
+
+  .comment-box {
+    font-size: 20px;
+  }
 }
 
 /*Colors
