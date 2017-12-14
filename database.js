@@ -2,6 +2,7 @@
 let express = require('express');
 let mongoose = require('mongoose');
 let bodyParser = require('body-parser');
+let expressValidator = require('express-validator')
 let commentSchema = require('./model/commentSchema')
 let app = express();
 let router = express.Router();
@@ -10,6 +11,7 @@ mongoose.connect('mongodb://localhost:27017/kittenforumdb', { useMongoClient: tr
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(expressValidator());
 
 // CORS
 app.use(function(req, res, next) {
@@ -43,12 +45,21 @@ router.route('/comments')
 
 // New comment
 .post(function(req, res) {
+  req.checkBody('text', 'please enter 5 or more characters').isLength({min: 5});
+  let errors = req.validationErrors();
+  if(errors){
+    console.log("it's a lie!")
+    res.send(errors);
+    return
+  }else{
   let newComment = new commentSchema({
   author: req.body.author,
   text: req.body.text
   });
 
   newComment.save();
+  console.log("this checks out!")
+}
 })
 
 

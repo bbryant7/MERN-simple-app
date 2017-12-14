@@ -14,9 +14,6 @@ body {
   background-size: cover;
   background-position: center;
   text-align: left;
-
-
-
 }
 
 h1{
@@ -56,8 +53,13 @@ h2{
   background-color: white;
   margin-left: 4%;
   flex-basis: 100%;
+  padding: 5px;
+  text-align: left;
 
+}
 
+.commentBox p {
+  margin: 0;
 }
 
 .authorbox {

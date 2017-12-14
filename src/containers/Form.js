@@ -17,9 +17,10 @@ export default class Form extends Component {
   }
 
   handleTextBoxChange(e){
-    this.setState({text:e.target.value})
-    console.log(e.target.value)
-  }
+      this.setState({text:e.target.value})
+      console.log(e.target.value)
+      console.log(e.target.value)
+    }
 
   handleSubmit(e){
     e.preventDefault();
@@ -40,6 +41,8 @@ export default class Form extends Component {
           onChange={this.handleAuthorChange} />
         <textarea className="comment-box"
           type='text'
+          maxLength='500'
+          minLength='5'
           placeholder='Share your kitten related tips, tricks and stories...'
           value={this.state.text}
           onChange={this.handleTextBoxChange} />
