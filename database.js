@@ -69,14 +69,14 @@ router.route("/comments")
   });
 
 // delete comment
-router.route('/comments/:comment_id')
-  .delete(function(req, res) {
-  commentSchema.remove({ _id: req.params.comment_id }, function(err, comment) {
-    if (err)
-      res.send(err);
-    res.json({ message: 'Comment has been deleted' })
-  })
-});
+// router.route('/comments/:comment_id')
+//   .delete(function(req, res) {
+//   commentSchema.remove({ _id: req.params.comment_id }, function(err, comment) {
+//     if (err)
+//       res.send(err);
+//     res.json({ message: 'Comment has been deleted' })
+//   })
+// });
 
 app.use("/api", router);
 
