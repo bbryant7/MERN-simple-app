@@ -3,7 +3,7 @@
 Simple app using a MERN stack to create a messaging board for cat lovers.
 
 Sketch:
-![alt text](resources/final.png "message board")
+![alt text](resources/wireframe.png "wireframe")
 
 Message Board
-![alt text](resources/wireframe.jpg "wireframe")
+![alt text](resources/finale.png "message-board")
