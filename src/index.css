@@ -8,7 +8,7 @@ body {
 }
 
 .splash{
-  height: 500px;
+  height: 300px;
   width: 100%;
   background-image: url('kitsanoo-65241.jpg');
   background-size: cover;
@@ -18,26 +18,28 @@ body {
 
 h1{
   font-family: 'Lobster', cursive;
-  font-size: 55px;
+  text-align: center;
+  vertical-align: center;
   margin-top: 0;
-  padding: 150px;
-  padding-bottom: 0;
+  padding: 100px 0px 0px 0px;
   margin-bottom: 0;
   text-shadow: white 1px 1px 8px, white 1px 1px 8px;
 }
 
 h2{
-  font-size: 30px;
+  text-align: center;
+  vertical-align: center;
+  margin-top: 0;
   font-weight: 500;
-  padding: 200px;
+  padding: 50px;
   padding-top: 2px;
   text-shadow: white 1px 1px 8px, white 1px 1px 8px;
 }
 
 .post{
   display: flex;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 2%;
 }
 
@@ -69,7 +71,6 @@ h2{
 
 button {
   padding: 8px;
-  font-size: 16px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 0px;
@@ -82,21 +83,19 @@ button {
 form {
   display: flex;
   flex-direction: column;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 6%;
   margin-top: 6%;
 
 }
 
 .author-input {
-  font-size: 20px;
   border: 1px solid #BEC3C7;
   padding: 5px;
 }
 
 .comment-box {
-  font-size: 20px;
   margin-top: 1%;
   border: 1px solid #BEC3C7;
   padding: 5px;
@@ -104,13 +103,49 @@ form {
 }
 
 .submit-button {
-  font-size: 20px;
   border-radius: 5px;
   margin-top: 1%;
   background-color: #00BC9C;
   border: 1px solid #00BC9C;
 }
 
+@media screen and ( min-width:900px ){
+  h1{
+    font-size: 55px;
+    padding-top: 200px;
+
+  }
+
+  h2{
+    font-size: 30px;
+
+}
+
+.splash{
+  height: 500px;
+}
+
+.post{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+form {
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+.author-input{
+  font-size: 20px;
+}
+.submit-button{
+    font-size: 20px;
+}
+
+.comment-box{
+    font-size: 20px;
+}
+}
 
 /*Colors
 #00BC9C - accent/button color
