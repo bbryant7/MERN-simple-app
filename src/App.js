@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="splash">
-          <h1> Lets Talk Kittens </h1>
+          <h1> Let's Talk Kittens </h1>
           <h2> Tips, Tricks and Stories for all things Kitten</h2>
         </div>
         <Form onSubmit={this.handleSubmit} />
