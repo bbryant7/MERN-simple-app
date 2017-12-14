@@ -6,4 +6,4 @@ Sketch:
 ![alt text](resources/wireframe.png "wireframe")
 
 Message Board
-![alt text](resources/finale.png "message-board")
+![alt text](resources/finale.png "messageboard")
