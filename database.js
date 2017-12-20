@@ -44,10 +44,9 @@ router.route("/comments")
     commentSchema.find(function(err, comments) {
       if (err) res.send(err);
       res.json(comments);
-      console.log("comments ->", comments);
     });
   })
-  
+
   // New comment
   .post(function(req, res) {
     req
@@ -55,7 +54,6 @@ router.route("/comments")
       .isLength({ min: 5 });
     let err = req.validationErrors();
     if (err) {
-      console.log("it's a lie!");
       res.json(err);
       return;
     } else {
@@ -65,19 +63,18 @@ router.route("/comments")
       });
 
       newComment.save();
-      console.log("this checks out!");
     }
   });
 
 // delete comment
-router.route('/comments/:comment_id')
-  .delete(function(req, res) {
-  commentSchema.remove({ _id: req.params.comment_id }, function(err, comment) {
-    if (err)
-      res.send(err);
-    res.json({ message: 'Comment has been deleted' })
-  })
-});
+// router.route('/comments/:comment_id')
+//   .delete(function(req, res) {
+//   commentSchema.remove({ _id: req.params.comment_id }, function(err, comment) {
+//     if (err)
+//       res.send(err);
+//     res.json({ message: 'Comment has been deleted' })
+//   })
+// });
 
 app.use("/api", router);
 

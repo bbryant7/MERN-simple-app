@@ -4,7 +4,7 @@ import "../App.css";
 export default class Form extends Component {
   constructor(props) {
     super(props);
-    this.state = { author: "", text: "" };
+    this.state = { author: "", text: "", error: "" };
     this.handleAuthorChange = this.handleAuthorChange.bind(this);
     this.handleTextBoxChange = this.handleTextBoxChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,15 +19,23 @@ export default class Form extends Component {
   }
 
   handleSubmit(e) {
+    if(this.state.text.length<5){
+      e.preventDefault();
+      this.setState({error: "Please make an entry with between 5 - 500 characters."})
+
+  }
+    else {
     e.preventDefault();
     this.props.onSubmit({ author: this.state.author, text: this.state.text });
-    this.setState({ author: "", text: "" });
+    this.setState({ author: "", text: "", error: "" });
 
-}
+  }
+  }
   render() {
     return (
       <div>
         <form className="form" onSubmit={this.handleSubmit}>
+          <div className = "error"> {this.state.error}</div>
           <input
             className="author-input"
             type="text"

@@ -9,12 +9,10 @@ export default class Comment extends Component {
           <div className="authorimage" />
           <h3> {this.props.author}</h3>
         </div>
-        <div className ="commentarea">
-        <div className="commentBox">
-          <p> {this.props.text} </p>
-        </div>
-        <button> Update </button>
-        <button> Delete </button>
+        <div className="commentarea">
+          <div className="commentBox">
+            <p> {this.props.text} </p>
+          </div>
         </div>
       </div>
     );
