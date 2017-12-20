@@ -20,7 +20,6 @@ class App extends Component {
   }
 
   handleSubmit(comment) {
-    console.log("in app", this.state.data);
     let newComments = this.state.data.concat([comment]);
     this.setState({ data: newComments });
     axios.post("http://localhost:3001/api/comments", comment).catch(err => {

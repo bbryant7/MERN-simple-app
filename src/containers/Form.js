@@ -12,24 +12,17 @@ export default class Form extends Component {
 
   handleAuthorChange(e) {
     this.setState({ author: e.target.value });
-    console.log(e.target.value);
   }
 
   handleTextBoxChange(e) {
     this.setState({ text: e.target.value });
-    console.log(e.target.value);
-    console.log(e.target.value.length);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("yayyy kittens!");
-    console.log("author", this.state.author);
-    console.log("text", this.state.text);
-    console.log("text length", this.state.text.length);
     this.props.onSubmit({ author: this.state.author, text: this.state.text });
     this.setState({ author: "", text: "" });
-  
+
 }
   render() {
     return (
