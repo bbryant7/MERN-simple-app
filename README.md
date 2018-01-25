@@ -17,7 +17,7 @@ Dependencies for project:
 
 How to Start:
 
-> `git clone https://github.com/bbryant7/MERN-simple-app.git`
-> `cd MERN-simple-app`
-> `npm install`
-> `npm run start-dev`
+- `git clone https://github.com/bbryant7/MERN-simple-app.git`
+- `cd MERN-simple-app`
+- `npm install`
+- `npm run start-dev`
